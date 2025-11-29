@@ -316,8 +316,57 @@ Luego podremos ver como que la linea 209 da unas instrucciones para que el dise√
     color: #A0A0A0;
     font-size: 16px;
     cursor: pointer;
-    padding: 10px;
-    
 }
 
+.load-more:hover {
+    background: linear-gradient(90deg, #E70B25 0%, #900314 100%);
+    border-color: rgb(220, 20, 60);
+    color: #FDFDFD;
+}
+
+.info {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url(images/bg-info.jpg); /*Esta linea de codigo hace que la imagen que se esta colocando de fondo tenga una especie de filtro, es decir hace que se le agregue un color solido degradado dandole una apariencia transparente a el color ya que al momento de agregarle el tipo de color se le especifica que sea al 50%, y esto lo aclara.*/
+    background-position: center center; /*Esta linea nos permite pocicionar de forma centrada la imagen tanto en el eje x como en el eje y.*/
+    background-repeat: no-repeat; /*Esta linea de codigo nos permite evitar que la imagen se repita en caso de que no ocupe el tama√±o del elemento en el que se encuentra.*/
+    background-size: cover; /*Esta linea de codigo nos permite determinar que el fondo cubra el 100% del ancho del elemento donde se encuantra el fondo que estamos editando, de la misma manera como se haria con "contain" pero en el setido vertical osea que ocupe el 100% del la altura del elemento donde estemos editando el fondo.*/
+    height: 50vh;
+}
+
+.info-content {
+    display: flex;
+    position: relative;
+}
+
+.info-text {
+    width: 60%;
+    margin-top: 85px;
+}
+
+.info-txt h2 {
+    color: #FDFDFD;
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.info-txt p {
+    font-size: 20px;
+    color: #A0A0A0;
+    margin-bottom: 25px;
+}
+
+.info-sec {
+    display: flex;
+}
+
+.into-1 {
+    display: flex;
+}
+
+.info-1 img {
+    width: 80px;
+}
+
+.info-2 {
+    margin-left: 25px;
+}
 
