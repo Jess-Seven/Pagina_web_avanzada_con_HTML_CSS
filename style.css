@@ -328,18 +328,18 @@ Luego podremos ver como que la linea 209 da unas instrucciones para que el dise√
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url(images/bg-info.jpg); /*Esta linea de codigo hace que la imagen que se esta colocando de fondo tenga una especie de filtro, es decir hace que se le agregue un color solido degradado dandole una apariencia transparente a el color ya que al momento de agregarle el tipo de color se le especifica que sea al 50%, y esto lo aclara.*/
     background-position: center center; /*Esta linea nos permite pocicionar de forma centrada la imagen tanto en el eje x como en el eje y.*/
     background-repeat: no-repeat; /*Esta linea de codigo nos permite evitar que la imagen se repita en caso de que no ocupe el tama√±o del elemento en el que se encuentra.*/
-    background-size: cover; /*Esta linea de codigo nos permite determinar que el fondo cubra el 100% del ancho del elemento donde se encuantra el fondo que estamos editando, de la misma manera como se haria con "contain" pero en el setido vertical osea que ocupe el 100% del la altura del elemento donde estemos editando el fondo.*/
+    background-size: cover; /*Esta linea de codigo nos permite determinar que el fondo cubra el 100% del ancho del elemento donde se encuantra el fondo que estamos editando, de la misma manera como se har√≠a con "contain" en ves de "cover" pero en el setido vertical osea que ocupe el 100% del la altura del elemento donde estemos editando el fondo.*/
     height: 50vh;
 }
 
 .info-content {
     display: flex;
-    position: relative;
+    position: relative; /*Este principalmente establece un ancla o un marco de referencia para sus elementos hijos que tengan "position:absolute". Es la base para crear superposiciones, colocar iconos dentro de campos de texto, crear menus desplegables y, en este caso, posicionar una imagen decorativa(.hoja) con respecto a su contenedor de producto.*/
 }
 
 .info-text {
-    width: 60%;
-    margin-top: 85px;
+    width: 60%; /*Este hace que el elemento (.info-text) ocupara el 60% del ancho de su contenedor padre.*/
+    margin-top: 85px; /*Esta propiedad a√±ade 85 pixeles entre el borde superior del contenedor padre y el contenedor hijo.*/
 }
 
 .info-txt h2 {
@@ -358,7 +358,7 @@ Luego podremos ver como que la linea 209 da unas instrucciones para que el dise√
     display: flex;
 }
 
-.into-1 {
+.info-1 {
     display: flex;
 }
 
@@ -368,5 +368,227 @@ Luego podremos ver como que la linea 209 da unas instrucciones para que el dise√
 
 .info-2 {
     margin-left: 25px;
+    margin-right: 25px;
 }
 
+.info-2 h3 {
+    color: #FDFDFD;
+    font-size: 25px;
+}
+
+.info-2 p {
+    color: #A0A0A0;
+    font-size: 16px;
+}
+
+.info-img {
+    position: absolute;
+    right: -55px;
+    top: -103px;
+    
+}
+
+.info-img img {
+    width: 650px;
+}
+
+.footer {
+    padding: 150px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-2 {
+    width: 150px;
+}
+
+.links h4 {
+    color: #FDFDFD;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.links ul li a {
+    color: #FDFDFD;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block; /* Por defecto, los <a> son 'inline' y no aceptan m√°rgenes verticales. 'inline-block' permite aplicar 'margin-bottom' sin que el elemento ocupe todo el ancho. En pocas palabras ingnoran dimensiones y margenes verticales. Pero la solucion es "display: inline-block" inline: Se mantiene en la misma linea que otros elementos, en lugar de saltar a una nueva linea (Comportamiento de "display: block") Block: Acepta propiedades de un elemento de bloque, como width, height.*/
+}
+
+.socials {
+    display: flex;
+}
+
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DD241B;
+    border-radius: 50%;
+}
+
+.social:hover {
+    background-color: #DD241B;
+}
+
+.social img {
+    margin: 8px 0 0 10px;
+}
+
+@media(max-width: 991px ) {
+
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #F3031F;
+        display: none;
+    }
+
+    .menu label ul li {
+        width: 100%;
+    }
+
+    .menu label ul li a:hover {
+        color: #A0A0A0;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 180px 30px 30px 30px;
+    }
+
+    .header-txt {
+        width: 100%;
+        padding: 0;
+        text-align: center;        
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-1 {
+        margin: 0 0 20px 0;
+    }
+
+    .btn-2 {
+        margin: 0 0 20px 0;
+    }
+
+    .header-img {
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    .product-menu {
+        padding: 30px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .hoja {
+        display: none;
+    }
+
+    .menu-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        margin-bottom: 25px;
+    }
+
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .box .image {
+        height: 200px;
+    }
+
+    .info {
+        padding: 30px;
+        height: 70vh;
+    }
+
+    .info-txt h2 {
+        font-size: 40px;
+    }
+
+    .info-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-txt {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .info-txt p {
+        margin-bottom: 5px;
+    }
+
+    .info-sec {
+        flex-direction: column;
+        padding: 0px 35px;
+    }
+
+    .info-1 {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .info-2 {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .info-img img {
+        display: none;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0;
+    }
+
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .links h4 {
+        margin: 25px 0 10px 0;
+    }
+
+}
